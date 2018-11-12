@@ -1,0 +1,13 @@
+---
+- name: reboot the host
+  hosts: client
+  vars:
+  tasks:
+    
+  - name: Reboot
+    shell: sleep 2 && reboot
+    sudo: yes
+    async: 30
+    poll: 0
+    ignore_errors: true
+
